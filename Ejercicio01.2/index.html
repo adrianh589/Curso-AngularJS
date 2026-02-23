@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="../commons/css/bootstrap.min.css">
+
+    <!-- Iniciar Angular JS -->
+    <script src="../commons/js/lib/angular.min.js"></script>
+
+
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>ng-model</h1>
+        <h4>En AngularJS</h4>
+        <hr>
+
+        <p>
+            Su nombre: {{ nombre | uppercase}}
+            <br>
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+        </p>
+
+        <p>
+            Pais seleccionado: {{ pais_seleccionado }}
+            <select class="form-control" ng-model="pais_seleccionado">
+                <option value="1">Costa Rica</option>
+                <option value="2">México</option>
+                <option value="3">Colombia</option>
+            </select>
+        </p>
+
+        <p>
+            Seleccione las opciones que desea {{opt1}} {{opt2}}
+            <br>
+            <input type="checkbox" ng-model="opt1" > Opción 1
+            <br>
+            <input type="checkbox" ng-model="opt2"> Opción 2
+        </p>
+
+        <p>
+            Seleccione el genero: {{genero}}
+            <br>
+            <input type="radio" value="M" ng-model="genero"> Masculino
+            <br>
+            <input type="radio" value="F" ng-model="genero"> Femenino
+        </p>
+
+    </div>
+
+</body>
+</html>

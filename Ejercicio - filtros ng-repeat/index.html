@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="universidadApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Filtros - ng-repeat</title>
+
+
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+        
+        <style>
+            .avatar{
+                width: 75px;
+                height: 75px;
+            }
+
+            .puntero{
+                cursor: pointer;
+            }
+
+        </style>
+
+    </head>    
+    <body>
+
+        <div class="container" ng-controller="listadoCtrl">
+            
+            <h1>Filtros</h1>
+            <h4>Para el ng-repeat</h4>
+            <hr>
+
+            <div class="row">
+                Busqueda:
+                <br>
+                <input type="text" ng-model="busqueda.nombre" class="form-control" placeholder="Buscar...">
+                <br>
+                
+                Sexo:
+                <br>
+                <select ng-model="busqueda.sexo" class="form-control">
+                    <option value="">Cualquiera</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Avatar</th>
+                    <th><a ng-click="columna='nombre'; reverse = !reverse" class="puntero">Nombre</a></th>
+                    <th><a ng-click="columna='sexo'; reverse = !reverse" class="puntero">Sexo</a></th>
+                    <th><a ng-click="columna='telefono'; reverse = !reverse" class="puntero">Telefono</a></th>
+                    <th><a ng-click="columna='celular'; reverse = !reverse" class="puntero">Celular</a></th>
+                </tr>
+
+                <tr ng-repeat="persona in personas | filter:busqueda | orderBy:columna:reverse">
+                    <th><img ng-src="img/{{persona.avatar}}" alt="avatr" class="avatar img-rounded"></th>
+                    <th>{{ persona.nombre }}</th>
+                    <th>{{ persona.sexo }}</th>
+                    <th>{{ persona.telefono }}</th>
+                    <th>{{ persona.celular }}</th>
+                </tr>
+            </table>
+
+        </div><!-- fin del listadoCtrl -->
+
+    </body>
+</html>
