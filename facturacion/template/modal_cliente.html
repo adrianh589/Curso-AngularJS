@@ -1,0 +1,111 @@
+<div class="modal fade" id="modal_cliente">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Modal Default</h4>
+            </div>
+
+            <form name="frmCliente"
+                  novalidate="novalidate"
+                  ng-submit="guardar( clienteSel, frmCliente )"
+            >
+
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>nombre</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="nombre"
+                           ng-model="clienteSel.nombre"
+                           required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>correo</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="correo"
+                           ng-model="clienteSel.correo"
+                           required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>direccion</label>
+                    <textarea type="text"
+                           class="form-control"
+                           placeholder="direccion"
+                           ng-model="clienteSel.direccion"
+                    >
+                        </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="id"
+                           ng-model="clienteSel.id"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>pais</label>
+                    <select type="text"
+                           class="form-control"
+                           placeholder="pais"
+                           ng-model="clienteSel.pais"
+                    >
+                        <option value="">--</option>
+                        <option value="">Espana</option>
+                        <option value="">Argentina</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>telefono1</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="telefono1"
+                           ng-model="clienteSel.telefono1"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>telefono2</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="telefono2"
+                           ng-model="clienteSel.telefono2"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>zip</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="zip"
+                           ng-model="clienteSel.zip"
+                    >
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-save"></i>
+                    Guardar
+                </button>
+            </div>
+
+            </form>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

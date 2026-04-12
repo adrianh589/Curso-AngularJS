@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="vehiculosApp" ng-controller="mainCtrl">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Incluir AngularJS -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular.route.js"></script>
+
+    <!-- App y rutas -->
+    <script src="js/index.js"></script>
+    <script src="js/config.js"></script>
+
+    <!-- Controladores -->
+    <script src="js/marcasCtrl.js"></script>
+    <script src="js/modelosCtrl.js"></script>
+    <script src="js/automovilesCtrl.js"></script>
 </head>
 <body>
-    Hola
+    <div ng-include="menuSuperior"></div>
+
+    <div class="container">
+        <!-- La pagina principal ira aquí -->
+        <div ng-view></div>
+
+    </div><!-- /.container -->
 </body>
 </html>

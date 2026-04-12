@@ -1,0 +1,13 @@
+{
+  "defaultMsg": "Por favor agrega un mensaje para {0}",
+  "email": "Por favor ingresa un correo electronico valido",
+  "minlength": "Por favor ingresa al menos {0} caracteres",
+  "maxlength": "Has ingresado mas del maximo de {0} caracteres",
+  "min": "Por favor ingresa el numero minimo de {0}",
+  "max": "Por favor ingresa el numero maximo de {0}",
+  "required": "Este campo es obligatorio",
+  "date": "Por favor ingresa una fecha valida",
+  "pattern": "Por favor asegurate de que la informacion siga este patron {0}",
+  "number": "Por favor ingresa un numero valido",
+  "url": "Por favor ingresa una URL valida con el formato http(s)://www.google.com"
+}

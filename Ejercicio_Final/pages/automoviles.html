@@ -1,0 +1,34 @@
+<h1>Automoviles</h1>
+
+<!-- Filtro por marca -->
+<span>Seleccione marca:</span>
+<select class="form-control"
+        ng-model="busqueda.marca"
+        ng-options="marca.marca as marca.marca for marca in marcas">
+</select>
+
+<br>
+
+<!-- Filtro por modelo -->
+<span>Seleccione modelo:</span>
+<select class="form-control"
+        ng-model="busqueda.modelo"
+        ng-options="modelo.modelo as modelo.modelo for modelo in modelos">
+</select>
+
+<br>
+
+<!-- Tabla de automóviles -->
+<table class="table table-striped">
+    <tr>
+        <th>Precio</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+    </tr>
+
+    <tr ng-repeat="automovil in automoviles | filter:busqueda">
+        <td>{{automovil.precio}}</td>
+        <td>{{automovil.marca}}</td>
+        <td>{{automovil.modelo}}</td>
+    </tr>
+</table>
